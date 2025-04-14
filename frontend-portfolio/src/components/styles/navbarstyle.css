@@ -1,0 +1,145 @@
+/* Navbar Styles */
+
+nav {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+  }
+  
+  /* Logo/Brand Name */
+  nav span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0066cc;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  nav span:hover {
+    color: #0055b3;
+  }
+  
+  /* Navigation Links */
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navigation Buttons */
+  nav ul li button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #495057;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Hover effect for nav links */
+  nav ul li button:hover {
+    color: #0066cc;
+  }
+  
+  /* Active link indicator - animated underline */
+  nav ul li button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #0066cc;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  nav ul li button:hover::after {
+    width: 80%;
+  }
+  
+  /* Active link style - you can add a class to the active link in your component */
+  nav ul li button.active {
+    color: #0066cc;
+    font-weight: 600;
+  }
+  
+  nav ul li button.active::after {
+    width: 80%;
+  }
+  
+  /* Mobile Menu Button - hidden by default */
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #495057;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem;
+    }
+    
+    /* Show mobile menu button */
+    .mobile-menu-button {
+      display: block;
+    }
+    
+    /* Hide regular menu initially */
+    nav ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background-color: white;
+      padding: 1rem 0;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      gap: 0;
+      
+      /* Hidden by default in mobile */
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    
+    /* Class to show menu when expanded */
+    nav ul.expanded {
+      max-height: 300px;
+    }
+    
+    nav ul li {
+      width: 100%;
+    }
+    
+    nav ul li button {
+      width: 100%;
+      padding: 1rem 2rem;
+      text-align: left;
+    }
+    
+    nav ul li button::after {
+      display: none;
+    }
+    
+    nav ul li button:hover {
+      background-color: #f8f9fa;
+    }
+  }

@@ -1,20 +1,19 @@
-// Home.jsx
 import './styles/Homestyle.css'
+import selfimage from './self.jpg'
 function Home() {
     return (
-        <>
-            <div>Hi, I am Shivam</div>
-            <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, laborum consequuntur temporibus et
-                fugit eum vel nihil pariatur perspiciatis reprehenderit aperiam est officiis saepe sint fugiat veniam,
-                quos dolores sed a assumenda? Voluptatibus deserunt at impedit quas ipsa sit, nisi optio, voluptas alias
-                minus, nostrum rem aperiam amet suscipit eaque.</p>
-                <img src="./images/self.png" alt="self image" />
+        <div id="home-container">
+            <div className="name-heading">Hi, I am Shivam</div>
+            <div className="content-section">
+                <p>Hello, I'm a passionate developer dedicated to crafting exceptional digital experiences. With expertise in React.js and full-stack development, I transform ideas into robust applications that resonate with users. Explore my projects, from innovative web apps to responsive designs, and discover how I blend creativity with technical prowess. Let's build something incredible together!</p>
+                <img src={selfimage} alt="self image" />
             </div>
-            <div>Full Stack Developer</div>
-            <div><button>Download CV</button>
-                <button>Hire me</button></div>
-
-        </>
+            <div className="role-designation">Full Stack Developer</div>
+            <div className="button-container">
+                <button>Download CV</button>
+                <button>Hire me</button>
+            </div>
+        </div>
     );
 }
 

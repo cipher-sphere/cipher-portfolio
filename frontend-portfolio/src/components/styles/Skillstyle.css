@@ -1,0 +1,204 @@
+/* Skills Component Styles */
+
+#skills {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  #skills h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #343a40;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Underline effect for heading */
+  #skills h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background-color: #0066cc;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  /* Skills grid */
+  /* Replace the skills grid section with this */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* And update this selector */
+.skills-grid > div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Then update all the color-specific styles */
+/* HTML */
+.skills-grid div:nth-child(1) button svg {
+  color: #e34c26;
+}
+/* and so on for the other tech icons... */
+  
+  /* Individual skill item container */
+  #skills > div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Skills buttons/cards */
+  #skills button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  #skills button:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Icon styles */
+  #skills button svg {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Skill title */
+  #skills button h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #343a40;
+  }
+  
+  /* Color-specific styles for each tech icon */
+  /* HTML */
+  #skills div:nth-child(2) button svg {
+    color: #e34c26;
+  }
+  
+  /* CSS */
+  #skills div:nth-child(3) button svg {
+    color: #264de4;
+  }
+  
+  /* JavaScript */
+  #skills div:nth-child(4) button svg {
+    color: #f7df1e;
+  }
+  
+  /* Tailwind */
+  #skills div:nth-child(5) button svg {
+    color: #38b2ac;
+  }
+  
+  /* React */
+  #skills div:nth-child(6) button svg {
+    color: #61dafb;
+  }
+  
+  /* Node.js */
+  #skills div:nth-child(7) button svg {
+    color: #68a063;
+  }
+  
+  /* Express.js */
+  #skills div:nth-child(8) button svg {
+    color: #000000;
+  }
+  
+  /* TypeScript */
+  #skills div:nth-child(9) button svg {
+    color: #3178c6;
+  }
+  
+  /* MongoDB */
+  #skills div:nth-child(10) button svg {
+    color: #4db33d;
+  }
+  
+  /* Next.js */
+  #skills div:nth-child(11) button svg {
+    color: #000000;
+  }
+  
+  /* Animation for hover */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #skills button:hover svg {
+    animation: pulse 1s infinite;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #skills {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    #skills button {
+      height: 150px;
+      padding: 1rem;
+    }
+    
+    #skills button svg {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #skills h1 {
+      font-size: 2rem;
+    }
+    
+    #skills {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    
+    #skills button {
+      height: 130px;
+      max-width: 100%;
+    }
+    
+    #skills button svg {
+      font-size: 2.5rem;
+    }
+    
+    #skills button h4 {
+      font-size: 1rem;
+    }
+  }

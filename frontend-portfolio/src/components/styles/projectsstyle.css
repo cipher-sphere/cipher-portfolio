@@ -1,0 +1,160 @@
+/* Projects Component Styles */
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  
+  /* Header styles */
+  .projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .projects-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .projects-header h1::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 4px;
+    background-color: #0066cc;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .projects-header p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+  }
+  
+  /* Filter buttons container */
+  .filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* Filter button styles */
+  .filter-buttons button {
+    padding: 0.7rem 1.5rem;
+    border: 2px solid #0066cc;
+    border-radius: 30px;
+    background-color: transparent;
+    color: #0066cc;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-buttons button:hover {
+    background-color: rgba(0, 102, 204, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .filter-buttons button.active {
+    background-color: #0066cc;
+    color: white;
+  }
+  
+  /* Projects grid */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* Project card container - styles for the ProjectCard component should be in a separate file */
+  /* These are just some basic styles to ensure proper spacing */
+  .projects-grid > div {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* View all projects button */
+  .view-all-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .view-all-container button {
+    padding: 0.8rem 2rem;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+  }
+  
+  .view-all-container button:hover {
+    background-color: #0055b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4);
+  }
+  
+  .view-all-container a {
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Empty state when no projects match filter */
+  .no-projects {
+    text-align: center;
+    padding: 3rem 0;
+    color: #6c757d;
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .projects-header h1 {
+      font-size: 2.2rem;
+    }
+    
+    .filter-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    
+    .filter-buttons button {
+      width: 100%;
+      max-width: 250px;
+    }
+    
+    .projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects-header h1 {
+      font-size: 1.8rem;
+    }
+    
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
